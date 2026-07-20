@@ -2,12 +2,14 @@
 
 ## Developer Launch Page
 
-This repository contains my Day 1 internship task.
+This repository contains my Day 1 and Day 2 internship tasks.
 
 ### About Me
-- Name: Indhira
-- Course: B.Tech Information Technology
-- College: Arunachala College of Engineering for Women
+
+* Name: Indhira Iyappan
+* Course: B.Tech Information Technology
+* College: Arunachala College of Engineering for Women
 
 ### Goal
-To Improve my Web Development Skill
+
+To improve my web development skills and become a full-stack developer.
