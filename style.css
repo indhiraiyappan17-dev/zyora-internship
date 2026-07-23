@@ -12,6 +12,68 @@ body{
     color: white;
     line-height: 1.6;
 }
+/* Theme Button */
+.theme-btn{
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Dark Mode */
+body.dark-mode{
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+body.dark-mode .about-card,
+body.dark-mode .skill-card,
+body.dark-mode .contact-form,
+body.dark-mode table{
+    background: #1e293b;
+    color: #f8fafc;
+    border-color: #334155;
+}
+
+body.dark-mode td{
+    border-bottom: 1px solid #334155;
+}
+
+body.dark-mode .section-title{
+    color: #f8fafc;
+}
+
+body.dark-mode input,
+body.dark-mode textarea{
+    background: #0f172a;
+    color: white;
+    border-color: #475569;
+}
+
+body.dark-mode .navbar{
+    background: #020617;
+}
+
+body.dark-mode footer{
+    background: #020617;
+}
+
+/* Form Messages */
+#formMessage{
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.success{
+    color: #16a34a;
+}
+
+.error{
+    color: #dc2626;
+}
 
 /* ===== CONTAINER ===== */
 .container{
