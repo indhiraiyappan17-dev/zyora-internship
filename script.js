@@ -1,51 +1,39 @@
 // DARK MODE
-const themeButton = document.getElementById('themeToggle');
+const toggleBtn = document.getElementById('themeToggle');
 
-themeButton.addEventListener('click', function () {
+toggleBtn.addEventListener('click', function () {
 
-    document.body.classList.toggle('dark-mode');
+  document.body.classList.toggle('dark-mode');
 
-    if(document.body.classList.contains('dark-mode')){
-        themeButton.innerHTML = '☀️ Light Mode';
-    } else {
-        themeButton.innerHTML = '🌙 Dark Mode';
-    }
+  if(document.body.classList.contains('dark-mode')){
+    toggleBtn.innerText = '☀️ Light Mode';
+  } else {
+    toggleBtn.innerText = '🌙 Dark Mode';
+  }
 });
 
 // FORM VALIDATION
 const form = document.getElementById('contactForm');
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const messageInput = document.getElementById('message');
-const formMessage = document.getElementById('formMessage');
+const message = document.getElementById('formMessage');
 
 form.addEventListener('submit', function(e){
 
-    e.preventDefault();
+  e.preventDefault();
 
-    const name = nameInput.value.trim();
-    const email = emailInput.value.trim();
-    const message = messageInput.value.trim();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const text = document.getElementById('message').value.trim();
 
-    formMessage.textContent = '';
-    formMessage.className = '';
+  message.className = '';
 
-    if(name === '' || email === '' || message === ''){
-        formMessage.textContent = 'Please fill all fields.';
-        formMessage.classList.add('error');
-        return;
-    }
+  if(name === '' || email === '' || text === ''){
+    message.textContent = 'Please fill all fields';
+    message.classList.add('error');
+    return;
+  }
 
-    const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+  message.textContent = '✅ Message sent successfully';
+  message.classList.add('success');
 
-    if(!emailPattern.test(email)){
-        formMessage.textContent = 'Enter a valid email address.';
-        formMessage.classList.add('error');
-        return;
-    }
-
-    formMessage.textContent = '✅ Message sent successfully!';
-    formMessage.classList.add('success');
-
-    form.reset();
+  form.reset();
 });
