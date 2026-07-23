@@ -1,39 +1,39 @@
-// DARK MODE
+// ===== DARK MODE =====
 const toggleBtn = document.getElementById('themeToggle');
 
 toggleBtn.addEventListener('click', function () {
 
-  document.body.classList.toggle('dark-mode');
+    document.body.classList.toggle('dark-mode');
 
-  if(document.body.classList.contains('dark-mode')){
-    toggleBtn.innerText = '☀️ Light Mode';
-  } else {
-    toggleBtn.innerText = '🌙 Dark Mode';
-  }
+    if (document.body.classList.contains('dark-mode')) {
+        toggleBtn.innerText = '☀️ Light Mode';
+    } else {
+        toggleBtn.innerText = '🌙 Dark Mode';
+    }
 });
 
-// FORM VALIDATION
+// ===== FORM VALIDATION =====
 const form = document.getElementById('contactForm');
-const message = document.getElementById('formMessage');
+const formMessage = document.getElementById('formMessage');
 
-form.addEventListener('submit', function(e){
+form.addEventListener('submit', function (e) {
 
-  e.preventDefault();
+    e.preventDefault();
 
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const text = document.getElementById('message').value.trim();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const text = document.getElementById('message').value.trim();
 
-  message.className = '';
+    formMessage.className = '';
 
-  if(name === '' || email === '' || text === ''){
-    message.textContent = 'Please fill all fields';
-    message.classList.add('error');
-    return;
-  }
+    if (name === '' || email === '' || text === '') {
+        formMessage.textContent = 'Please fill all fields';
+        formMessage.classList.add('error');
+        return;
+    }
 
-  message.textContent = '✅ Message sent successfully';
-  message.classList.add('success');
+    formMessage.textContent = '✅ Message sent successfully';
+    formMessage.classList.add('success');
 
-  form.reset();
+    form.reset();
 });
