@@ -1,144 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indhira | Developer Launch Page</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indhira Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Indhira Iyappan</h1>
-        <p>B.Tech Information Technology Student | Future Web Developer</p>
+<nav class="navbar">
+    <h1 class="logo">INDHIRA</h1>
 
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
-        </nav>
-    </header>
-
-    <main>
-
-        <section id="about">
-            <h2>About Me</h2>
-
-            <img src="Indhira.jpg.jpeg" width="200" height="200"
-                 alt="Portrait placeholder image representing Indhira Iyappan">
-
-            <p>
-                Hello! I am <strong>Indhira Iyappan</strong>, a B.Tech Information Technology student
-                at Arunachala College of Engineering for Women.
-            </p>
-
-            <p>
-                My goal is to become a skilled full-stack web developer and secure a job
-                in a product-based technology company.
-            </p>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-
-            <h3>Programming Languages</h3>
-            <ul>
-                <li>C</li>
-                <li>C++</li>
-                <li>Java</li>
-                <li>Python</li>
-            </ul>
-
-            <h3>Web Technologies</h3>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-
-            <h3>Tools</h3>
-            <ul>
-                <li>VS Code</li>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>Figma</li>
-            </ul>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Qualification</th>
-                        <th>Institution</th>
-                        <th>Year</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>B.Tech Information Technology</td>
-                        <td>Arunachala College of Engineering for Women</td>
-                        <td>2024 - 2028</td>
-                    </tr>
-
-                    <tr>
-                        <td>Higher Secondary (HSC)</td>
-                        <td>St. Joseph's Convent Higher Secondary School</td>
-                        <td>2024</td>
-                    </tr>
-
-                    <tr>
-                        <td>SSLC</td>
-                        <td>St. Joseph's Convent Higher Secondary School</td>
-                        <td>2022</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Me</h2>
-
-           <form id="contactForm" class="contact-form">
-
-  <input type="text" id="name" placeholder="Enter your name">
-
-  <input type="email" id="email" placeholder="Enter your email">
-
-  <textarea id="message" rows="5" placeholder="Write your message"></textarea>
-
-  <p id="formMessage"></p>
-
-  <button type="submit">Send Message</button>
-
-</form>
-        </section>
-
-    </main>
-
-    <h2>About Me</h2>
-    <p>
-        I am a B.Tech Information Technology student from
-        Arunachala College of Engineering for Women.
-    </p>
-<p>Currently learning and building projects during my 15-day internship.</p>
-    <h2>What I Will Build in These 15 Days</h2>
-    <ul>
-        <li>HTML & CSS projects</li>
-        <li>JavaScript mini applications</li>
-        <li>Responsive web pages</li>
-        <li>Git & GitHub workflow projects</li>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
-     <footer>
-        <p>&copy; 2026 Indhira Iyappan. All rights reserved.</p>
-    </footer>
-<script src="script.js" defer></script>
+
+    <button id="themeToggle">🌙 Dark Mode</button>
+</nav>
+
+<header class="hero">
+    <h1>Hi, I'm Indhira 👋</h1>
+    <p>B.Tech Information Technology Student | Future Web Developer</p>
+</header>
+
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="card">
+        <p>I am a B.Tech Information Technology student from Arunachala College of Engineering for Women. I am passionate about Frontend Development, UI/UX Design, and building responsive web applications.</p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+        <div class="skill-card">
+            <h3>HTML</h3>
+            <p>Semantic structure and accessibility</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>CSS</h3>
+            <p>Responsive design using Flexbox and Grid</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>JavaScript</h3>
+            <p>DOM manipulation and event handling</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Java</h3>
+            <p>OOP concepts and core programming</p>
+        </div>
+    </div>
+</section>
+
+<section id="education">
+    <h2 class="section-title">Education</h2>
+
+    <table>
+        <tr>
+            <th>Qualification</th>
+            <th>Institution</th>
+            <th>Year</th>
+        </tr>
+
+        <tr>
+            <td>B.Tech IT</td>
+            <td>Arunachala College of Engineering for Women</td>
+            <td>2024 - 2028</td>
+        </tr>
+
+        <tr>
+            <td>HSC</td>
+            <td>St. Joseph's Convent HSS</td>
+            <td>2024</td>
+        </tr>
+
+        <tr>
+            <td>SSLC</td>
+            <td>St. Joseph's Convent HSS</td>
+            <td>2022</td>
+        </tr>
+    </table>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+
+    <form id="contactForm" class="contact-form">
+
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <textarea id="message" rows="5" placeholder="Write your message"></textarea>
+
+        <p id="formMessage"></p>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Indhira | Portfolio Website</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
+
+     
+      
+    
