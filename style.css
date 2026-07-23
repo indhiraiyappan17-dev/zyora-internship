@@ -1,18 +1,80 @@
-/* ===== RESET ===== */
+/* =========================
+   GOOGLE FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   RESET
+========================= */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
+/* =========================
+   BODY
+========================= */
 body{
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container{
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar{
     background: #0f172a;
     color: white;
-    line-height: 1.6;
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-/* Theme Button */
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: #38bdf8;
+}
+
+/* DARK MODE BUTTON */
 .theme-btn{
     background: #2563eb;
     color: white;
@@ -21,47 +83,175 @@ body{
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
+    transition: 0.3s;
 }
 
-/* Dark Mode */
-body.dark-mode{
-    background: #0f172a;
-    color: #f8fafc;
+.theme-btn:hover{
+    background: #1d4ed8;
 }
 
-body.dark-mode .about-card,
-body.dark-mode .skill-card,
-body.dark-mode .contact-form,
-body.dark-mode table{
-    background: #1e293b;
-    color: #f8fafc;
-    border-color: #334155;
-}
-
-body.dark-mode td{
-    border-bottom: 1px solid #334155;
-}
-
-body.dark-mode .section-title{
-    color: #f8fafc;
-}
-
-body.dark-mode input,
-body.dark-mode textarea{
-    background: #0f172a;
+/* =========================
+   HERO
+========================= */
+.hero{
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
-    border-color: #475569;
 }
 
-body.dark-mode .navbar{
-    background: #020617;
+.hero h1{
+    font-size: 2.8rem;
+    margin-bottom: 12px;
 }
 
-body.dark-mode footer{
-    background: #020617;
+.hero p{
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
-/* Form Messages */
+/* =========================
+   SECTIONS
+========================= */
+section{
+    margin: 50px 0;
+}
+
+.section-title{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0f172a;
+    text-align: center;
+}
+
+/* =========================
+   ABOUT CARD
+========================= */
+.about-card{
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skills-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card{
+    background: white;
+    padding: 25px;
+    width: 180px;
+    text-align: center;
+    border-radius: 18px;
+    border: 2px solid #e5e7eb;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover{
+    transform: translateY(-8px);
+    border-color: #2563eb;
+    box-shadow: 0 10px 20px rgba(37,99,235,0.15);
+}
+
+.skill-card h3{
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   EDUCATION TABLE
+========================= */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+th{
+    background: #2563eb;
+    color: white;
+    padding: 16px;
+    text-align: left;
+}
+
+td{
+    padding: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tr:hover{
+    background: #f8fafc;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+.contact-form{
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input,
+textarea{
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus{
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.15);
+}
+
+button{
+    background: #2563eb;
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background: #1d4ed8;
+    transform: scale(1.02);
+}
+
+/* =========================
+   FORM MESSAGE
+========================= */
 #formMessage{
     margin: 15px 0;
     font-weight: 600;
@@ -75,92 +265,105 @@ body.dark-mode footer{
     color: #dc2626;
 }
 
-/* ===== CONTAINER ===== */
-.container{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem;
-}
-
-/* ===== NAVBAR ===== */
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem 0;
-}
-
-.nav-links{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.nav-links a{
+/* =========================
+   FOOTER
+========================= */
+footer{
+    background: #0f172a;
     color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* ===== HERO SECTION ===== */
-.hero{
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 25px;
+    margin-top: 50px;
 }
 
-.hero h1{
-    font-size: 2rem;
-    margin-bottom: 1rem;
+/* =========================
+   DARK MODE (IMPORTANT)
+========================= */
+
+/* BODY DARK */
+body.dark-mode{
+    background: #0f172a;
+    color: #f8fafc;
 }
 
-.hero p{
-    font-size: 1rem;
-    color: #cbd5e1;
-}
-
-/* ===== SKILLS SECTION ===== */
-.skills{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.card{
+/* CARDS DARK */
+body.dark-mode .about-card,
+body.dark-mode .skill-card,
+body.dark-mode .contact-form,
+body.dark-mode table{
     background: #1e293b;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    text-align: center;
-    transition: transform 0.3s ease;
+    color: #f8fafc;
+    border-color: #334155;
 }
 
-.card:hover{
-    transform: translateY(-5px);
+/* TABLE DARK */
+body.dark-mode td{
+    border-bottom: 1px solid #334155;
 }
 
-/* ===== TABLET VIEW ===== */
-@media (min-width: 768px){
+body.dark-mode tr:hover{
+    background: #273549;
+}
+
+/* HEADINGS DARK */
+body.dark-mode .section-title{
+    color: #ffffff;
+}
+
+/* INPUTS DARK */
+body.dark-mode input,
+body.dark-mode textarea{
+    background: #0f172a;
+    color: #ffffff;
+    border: 2px solid #475569;
+}
+
+/* NAVBAR + FOOTER DARK */
+body.dark-mode .navbar,
+body.dark-mode footer{
+    background: #020617;
+}
+
+/* HERO DARK */
+body.dark-mode .hero{
+    background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px){
+
+    .nav-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
     .hero h1{
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
-    .skills{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* ===== DESKTOP VIEW ===== */
-@media (min-width: 1024px){
-
-    .skills{
-        grid-template-columns: repeat(3, 1fr);
+    .skills-grid{
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hero{
-        padding: 5rem 2rem;
+    .skill-card{
+        width: 100%;
+        max-width: 300px;
+    }
+
+    table{
+        font-size: 0.9rem;
+    }
+
+    .theme-btn{
+        width: 100%;
+        max-width: 220px;
     }
 }
