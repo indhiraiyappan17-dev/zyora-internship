@@ -21,6 +21,57 @@ body{
   align-items:center;
   border-radius:10px;
 }
+/* ===== SKILLS CARDS ===== */
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.skill-card{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 6px 15px rgba(0,0,0,0.08);
+  border:2px solid #e5e7eb;
+  transition:all 0.3s ease;
+}
+
+.skill-card:hover{
+  transform:translateY(-8px);
+  border-color:#2563eb;
+  box-shadow:0 12px 25px rgba(37,99,235,0.18);
+}
+
+.skill-card h3{
+  color:#2563eb;
+  margin-bottom:10px;
+  font-size:1.3rem;
+}
+
+.skill-card p{
+  color:#475569;
+  font-size:0.95rem;
+  line-height:1.5;
+}
+
+/* DARK MODE */
+
+body.dark-mode .skill-card{
+  background:#1e293b;
+  color:white;
+  border-color:#334155;
+}
+
+body.dark-mode .skill-card p{
+  color:#cbd5e1;
+}
+
+body.dark-mode .skill-card h3{
+  color:#60a5fa;
+}
 
 #themeToggle{
   background:white;
