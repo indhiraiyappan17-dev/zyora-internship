@@ -12,6 +12,7 @@ body{
   padding:20px;
 }
 
+/* ===== NAVBAR ===== */
 .navbar{
   background:#2563eb;
   color:white;
@@ -21,8 +22,61 @@ body{
   align-items:center;
   border-radius:10px;
 }
-/* ===== SKILLS CARDS ===== */
 
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:20px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+#themeToggle{
+  background:white;
+  color:#2563eb;
+  border:none;
+  padding:10px 15px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+/* ===== HERO ===== */
+.hero{
+  text-align:center;
+  padding:60px 20px;
+}
+
+.hero h1{
+  font-size:2.5rem;
+  margin-bottom:10px;
+}
+
+/* ===== SECTIONS ===== */
+section{
+  margin:40px 0;
+}
+
+.section-title{
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:20px;
+  color:#0f172a;
+}
+
+/* ===== ABOUT CARD ===== */
+.card{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ===== SKILLS CARDS ===== */
 .skills-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -57,112 +111,92 @@ body{
   line-height:1.5;
 }
 
-/* DARK MODE */
-
-body.dark-mode .skill-card{
-  background:#1e293b;
-  color:white;
-  border-color:#334155;
-}
-
-body.dark-mode .skill-card p{
-  color:#cbd5e1;
-}
-
-body.dark-mode .skill-card h3{
-  color:#60a5fa;
-}
-
-#themeToggle{
+/* ===== EDUCATION TABLE ===== */
+table{
+  width:100%;
+  border-collapse:collapse;
   background:white;
-  color:#2563eb;
-  border:none;
-  padding:10px 15px;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:bold;
-}
-
-.hero{
-  text-align:center;
-  padding:60px 20px;
-}
-
-.hero h1{
-  font-size:2.5rem;
-  margin-bottom:10px;
-  text-align:centre;
-}
-
-.card{
-  background:white;
-  padding:25px;
   border-radius:15px;
-  margin:30px 0;
+  overflow:hidden;
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 
-.skills{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-  gap:15px;
+th{
+  background:#2563eb;
+  color:white;
+  padding:15px;
+  text-align:left;
 }
 
-.skill{
+td{
+  padding:15px;
+  border-bottom:1px solid #e5e7eb;
+}
+
+tr:hover{
+  background:#f8fafc;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-form{
   background:white;
-  padding:20px;
-  text-align:center;
-  border-radius:12px;
+  padding:30px;
+  border-radius:15px;
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
-  font-weight:bold;
 }
 
-form{
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-}
-
-input,textarea{
+.contact-form input,
+.contact-form textarea{
+  width:100%;
   padding:12px;
+  margin-bottom:15px;
   border:2px solid #d1d5db;
   border-radius:8px;
   font-size:1rem;
 }
 
-button[type="submit"]{
+.contact-form button{
   background:#2563eb;
   color:white;
   border:none;
   padding:12px;
   border-radius:8px;
   cursor:pointer;
+  font-size:1rem;
+  font-weight:bold;
 }
 
+.contact-form button:hover{
+  background:#1d4ed8;
+}
+
+/* ===== FORM MESSAGES ===== */
 .success{
-  color:green;
+  color:#16a34a;
   font-weight:bold;
 }
 
 .error{
-  color:red;
+  color:#dc2626;
   font-weight:bold;
 }
 
+/* ===== FOOTER ===== */
 footer{
   text-align:center;
   margin-top:40px;
+  padding:20px;
+  background:#2563eb;
+  color:white;
+  border-radius:10px;
 }
 
-/* ===== DARK MODE ===== */
+/* =====================================
+   DARK MODE
+===================================== */
+
 body.dark-mode{
   background:#0b1220;
-  color:white;
-}
-
-body.dark-mode .card,
-body.dark-mode .skill{
-  background:#1e293b;
   color:white;
 }
 
@@ -170,9 +204,73 @@ body.dark-mode .navbar{
   background:#020617;
 }
 
+body.dark-mode footer{
+  background:#020617;
+}
+
+body.dark-mode .card,
+body.dark-mode .skill-card,
+body.dark-mode .contact-form,
+body.dark-mode table{
+  background:#1e293b;
+  color:white;
+  border-color:#334155;
+}
+
+body.dark-mode .section-title{
+  color:white;
+}
+
+body.dark-mode .skill-card h3{
+  color:#60a5fa;
+}
+
+body.dark-mode .skill-card p{
+  color:#cbd5e1;
+}
+
+body.dark-mode td{
+  border-bottom:1px solid #334155;
+}
+
+body.dark-mode tr:hover{
+  background:#273549;
+}
+
 body.dark-mode input,
 body.dark-mode textarea{
   background:#0f172a;
   color:white;
   border-color:#475569;
+}
+
+body.dark-mode .hero{
+  color:white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+
+  .navbar{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero h1{
+    font-size:2rem;
+  }
+
+  .skills-grid{
+    grid-template-columns:1fr;
+  }
+
+  table{
+    font-size:0.9rem;
+  }
 }
