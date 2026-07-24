@@ -37,3 +37,32 @@ form.addEventListener('submit', function (e) {
 
     form.reset();
 });
+const loadProfileBtn = document.getElementById("loadProfile");
+const profile = document.getElementById("profile");
+
+async function loadGitHubProfile() {
+    profile.innerHTML = "<p>Loading...</p>";
+
+    try {
+        const response = await fetch("https://api.github.com/users/indhiraiyappan17-dev");
+
+        if (!response.ok) {
+            throw new Error("Couldn't fetch data");
+        }
+
+        const data = await response.json();
+
+        profile.innerHTML = `
+            <img src="${data.avatar_url}" width="120" style="border-radius:50%;">
+            <h3>${data.name || data.login}</h3>
+            <p>${data.bio || "No bio available"}</p>
+            <p>Followers: ${data.followers}</p>
+            <p>Public Repositories: ${data.public_repos}</p>
+            <a href="${data.html_url}" target="_blank">Visit GitHub Profile</a>
+        `;
+    } catch (error) {
+        profile.innerHTML = "<p>Couldn't fetch data.</p>";
+    }
+}
+
+loadProfileBtn.addEventListener("click", loadGitHubProfile);
