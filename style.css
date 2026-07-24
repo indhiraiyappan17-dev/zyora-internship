@@ -11,17 +11,20 @@ body{
   transition:0.3s;
   padding:20px;
 }
-.round-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2563eb;
+    display: block;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.round-image:hover {
-  transform: rotate(10deg) scale(1.1); /* tilt + zoom */
-  cursor: pointer;
+.profile-img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
 }
 
 /* ===== NAVBAR ===== */
